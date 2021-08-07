@@ -1,0 +1,189 @@
+void rocket(){
+
+
+glBegin(GL_POLYGON);
+//rocket black tail
+glColor3ub(0, 0, 0);
+glVertex2f(-4.0f,134.0f);
+glVertex2f(-8.0f,120.0f);
+glVertex2f(8.0f,120.0f);
+glVertex2f(4.0f,134.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket body rectangle3
+glColor3ub(160, 160, 160);
+glVertex2f(-8.0f,180.0f);
+glVertex2f(-8.0f,134.0f);
+glVertex2f(8.0f,134.0f);
+glVertex2f(8.0f,180.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket body rectangle 2 & 3 join
+glColor3ub(0, 0, 0);
+glVertex2f(-6.0f,182.0f);
+glVertex2f(-6.0f,180.0f);
+glVertex2f(6.0f,180.0f);
+glVertex2f(6.0f,182.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket body rectangle2
+glColor3ub(160, 160, 160);
+glVertex2f(-6.0f,220.0f);
+glVertex2f(-6.0f,182.0f);
+glVertex2f(6.0f,182.0f);
+glVertex2f(6.0f,220.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket body rectangle 1 & 2 join
+glColor3ub(0, 0, 0);
+glVertex2f(-4.0f,224.0f);
+glVertex2f(-4.0f,220.0f);
+glVertex2f(4.0f,220.0f);
+glVertex2f(4.0f,224.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket body rectangle1
+glColor3ub(160, 160, 160);
+glVertex2f(-4.0f,260.0f);
+glVertex2f(-4.0f,224.0f);
+glVertex2f(4.0f,224.0f);
+glVertex2f(4.0f,260.0f);
+glEnd();
+
+glBegin(GL_POLYGON);
+//rocket head part 2
+glColor3ub(0, 0, 0);
+glVertex2f(-2.0f,266.0f);
+glVertex2f(-4.0f,260.0f);
+glVertex2f(4.0f,260.0f);
+glVertex2f(2.0f,266.0f);
+glEnd();
+
+glBegin(GL_TRIANGLES);
+//rocket head part 1
+glColor3ub(160, 160, 160);
+glVertex2f(0.0f,274.0f);
+glVertex2f(-2.0f,266.0f);
+glVertex2f(2.0f,266.0f);
+glEnd();
+
+glBegin(GL_TRIANGLES);
+//rocket right wing
+glColor3ub(0, 0, 0);
+glVertex2f(8.0f,160.0f);
+glVertex2f(8.0f,140.0f);
+glVertex2f(20.0f,140.0f);
+glEnd();
+
+glBegin(GL_TRIANGLES);
+//rocket rleft wing
+glColor3ub(0, 0, 0);
+glVertex2f(-8.0f,160.0f);
+glVertex2f(-20.0f,140.0f);
+glVertex2f(-8.0f,140.0f);
+glEnd();
+
+glBegin(GL_LINES);
+//rocket flames
+glColor3ub(255, 0, 0);
+glVertex2f(-6.0f,120.0f);
+glVertex2f(-6.0f,106.0f);
+glVertex2f(-4.0f,120.0f);
+glVertex2f(-4.0f,106.0f);
+glVertex2f(-2.0f,120.0f);
+glVertex2f(-2.0f,104.0f);
+glVertex2f(6.0f,120.0f);
+glVertex2f(6.0f,106.0f);
+glVertex2f(4.0f,120.0f);
+glVertex2f(4.0f,106.0f);
+glVertex2f(2.0f,120.0f);
+glVertex2f(2.0f,104.0f);
+glVertex2f(0.0f,120.0f);
+glVertex2f(0.0f,100.0f);
+
+//rocket name NASA
+glColor3ub(0, 0, 0);
+glVertex2f(-4.0f,218.0f);
+glVertex2f(-4.0f,210.0f);
+glVertex2f(-4.0f,218.0f);
+glVertex2f(4.0f,210.0f);
+glVertex2f(4.0f,218.0f);
+glVertex2f(4.0f,210.0f);
+
+glVertex2f(0.0f,208.0f);
+glVertex2f(-4.0f,200.0f);
+glVertex2f(0.0f,208.0f);
+glVertex2f(4.0f,200.0f);
+glVertex2f(-2.0f,204.0f);
+glVertex2f(2.0f,204.0f);
+
+glVertex2f(4.0f,198.0f);
+glVertex2f(-4.0f,198.0f);
+glVertex2f(-4.0f,198.0f);
+glVertex2f(-4.0f,194.0f);
+glVertex2f(-4.0f,194.0f);
+glVertex2f(4.0f,194.0f);
+glVertex2f(4.0f,194.0f);
+glVertex2f(4.0f,190.0f);
+glVertex2f(4.0f,190.0f);
+glVertex2f(-4.0f,190.0f);
+
+glVertex2f(0.0f,190.0f);
+glVertex2f(-4.0f,182.0f);
+glVertex2f(0.0f,190.0f);
+glVertex2f(4.0f,182.0f);
+glVertex2f(-2.0f,186.0f);
+glVertex2f(2.0f,186.0f);
+
+glEnd();
+
+glBegin(GL_POLYGON);
+//bd flag green
+glColor3ub(0, 153, 0);
+glVertex2f(6.0f,176.0f);
+glVertex2f(-6.0f,176.0f);
+glVertex2f(-6.0f,138.0f);
+glVertex2f(6.0f,138.0f);
+glEnd();
+
+
+//bd flag red
+	glColor3ub(255,0,0);
+	glBegin(GL_POLYGON);
+	for(int i=0;i<200;i++)
+        {
+            float pi=3.1416;
+            float A=(i*2*pi)/200;
+            float r=4.85;
+            float x = r * cos(A);
+            float y = r * sin(A);
+            glVertex2f(x+0,y+160 );
+        }
+
+	glEnd();
+
+
+	//bd flag red
+	glColor3ub(0,0,0);
+	glBegin(GL_POLYGON);
+	for(int i=0;i<200;i++)
+        {
+            float pi=3.1416;
+            float A=(i*2*pi)/200;
+            float r=3.85;
+            float x = r * cos(A);
+            float y = r * sin(A);
+            glVertex2f(x+0,y+245 );
+        }
+
+	glEnd();
+
+	glFlush();
+
+
+}

@@ -1,0 +1,13 @@
+void bac(){
+
+glBegin(GL_POLYGON);
+//back color test
+glColor3ub(0,0,95);
+glVertex2f(-200.0f,0.0f);
+glVertex2f(200.0f,0.0f);
+glVertex2f(200.0f,480.0f);
+glVertex2f(-200.0f,480.0f);
+
+glEnd();
+
+}

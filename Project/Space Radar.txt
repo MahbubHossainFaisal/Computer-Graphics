@@ -1,0 +1,91 @@
+float radar_angle1 = 0;
+float radar_angle2 = 0;
+
+
+void spaceRadar()
+{
+//radar body
+glPushMatrix();
+glBegin(GL_QUADS);
+glColor3ub(210,105,30);
+glVertex2d(-150,100);
+glVertex2d(-150,70);
+glVertex2d(-130,70);
+glVertex2d(-130,100);
+glEnd();
+glPopMatrix();
+
+//radar hands
+glPushMatrix();
+glTranslatef(0.0f,0.0f,0.0f);
+glRotatef(radar_angle1, 0.0f, 0.0f,1.0f);
+glBegin(GL_LINES);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=10;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(255,255,0);
+glVertex2f(-180,110);
+glVertex2f(-180,90);
+glVertex2f(-160,70);
+glVertex2f(-160,100);
+glEnd();
+glBegin(GL_QUADS);
+glColor3ub(255,255,0);
+glVertex2f(-120,100);
+glVertex2f(-120,70);
+glVertex2f(-100,60);
+glVertex2f(-100,110);
+glEnd();
+
+glBegin(GL_POLYGON);
+for(int i=0;i<200;i++)
+{
+glColor3ub(0,0,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=0.05;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+glPopMatrix();
+glFlush();
+}
+
+
+
+void radarUpdate1(int value) {
+
+ radar_angle1+=1.0f;
+if(radar_angle1 > 360.0)
+{
+radar_angle1-=360;
+}
+glutPostRedisplay();
+
+ glutTimerFunc(20, radarUpdate1, 0);
+}
+
+void radarUpdate2(int value) {
+
+ radar_angle2+=1.0f;
+if(radar_angle2 > 360.0)
+{
+radar_angle2-=360;
+}
+glutPostRedisplay();
+
+ glutTimerFunc(20, radarUpdate2, 0);
+}
