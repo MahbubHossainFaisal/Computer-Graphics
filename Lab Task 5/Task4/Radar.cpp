@@ -43,7 +43,7 @@ glVertex2f(0.4,-0.03);
 glVertex2f(0.4,0.03);
 glEnd();
 
-glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+glBegin(GL_POLYGON);
 for(int i=0;i<200;i++)
 {
 glColor3ub(0,0,0);
