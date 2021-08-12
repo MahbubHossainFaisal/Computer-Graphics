@@ -1,0 +1,188 @@
+void planetX()
+{
+glPushMatrix();
+glTranslatef(-100,350,0);
+glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,165,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=32;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+//small circles under the skin of the planetX
+glPushMatrix();
+glTranslatef(-110,370,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,0,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=5;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-96,350,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,50);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=4;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-80,350,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=4;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-120,340,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=4;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-100,325,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=3;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-110,340,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=2;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+glPushMatrix();
+glTranslatef(-95,370,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=3;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-122,360,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=4;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+glPushMatrix();
+glTranslatef(-85,330,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=2;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(-82,370,0);
+glBegin(GL_POLYGON);
+
+for(int i=0;i<200;i++)
+{
+glColor4ub(255,0,0,100);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=2;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+glPopMatrix();
+
+}

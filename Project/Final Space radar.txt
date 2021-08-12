@@ -1,0 +1,160 @@
+
+float radar_angle1 = 0;
+float radar_angle2 = 0;
+float satelite_angle1 = 30.0f;
+
+void faisalDisplay();
+
+void spaceRadar()
+{
+
+//radar body
+glPushMatrix();
+glTranslatef(0,20,0);
+glBegin(GL_QUADS);
+glColor3ub(210,105,30);
+glVertex2d(-150,100);
+glVertex2d(-150,70);
+glVertex2d(-130,70);
+glVertex2d(-130,100);
+glEnd();
+glPushMatrix();
+glTranslatef(0,-20,0);
+glBegin(GL_LINES);
+glColor3ub(255,255,255);
+glVertex2d(-180,105);
+glVertex2d(-100,105);
+glEnd();
+glPopMatrix();
+
+glPushMatrix();
+glTranslatef(0,-20,0);
+glBegin(GL_LINES);
+glColor3ub(255,255,255);
+glVertex2d(-140,145);
+glVertex2d(-140,65);
+glEnd();
+glPopMatrix();
+glPopMatrix();
+
+//radar hands
+glPushMatrix();
+
+glTranslatef(-140,105,0);
+glRotatef(radar_angle1, 0.0f, 0.0f,1.0f);
+glLineWidth(3);
+
+glBegin(GL_LINES);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=40;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+
+glBegin(GL_LINES);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=30;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+
+glEnd();
+
+
+
+glBegin(GL_LINES);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=20;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+glBegin(GL_LINES);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,0);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=10;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+
+glBegin(GL_POLYGON);
+for(int i=0;i<200;i++)
+{
+glColor3ub(0,0,128);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=7;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+
+
+glBegin(GL_POLYGON);
+for(int i=0;i<200;i++)
+{
+glColor3ub(255,255,255);
+float pi=3.1416;
+float A=(i*2*pi)/200;
+float r=3;
+float x = r * cos(A);
+float y = r * sin(A);
+glVertex2f(x,y);
+}
+glEnd();
+
+glPopMatrix();
+glFlush();
+}
+
+
+
+void radarUpdate1(int value) {
+
+ radar_angle1+=1.0f;
+if(radar_angle1 > 360.0)
+{
+radar_angle1-=360;
+}
+glutPostRedisplay();
+
+ glutTimerFunc(20, radarUpdate1, 0);
+}
+
+void radarUpdate2(int value) {
+
+ radar_angle2+=1.0f;
+if(radar_angle2 > 360.0)
+{
+radar_angle2-=360;
+}
+glutPostRedisplay();
+
+ glutTimerFunc(20, radarUpdate2, 0);
+}

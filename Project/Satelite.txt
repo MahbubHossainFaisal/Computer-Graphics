@@ -1,0 +1,138 @@
+void satelite()
+{
+
+ glPushMatrix();
+glTranslatef(140,-80,0);
+ glPushMatrix();
+ glRotatef(satelite_angle1,0.0f,1.0f,0.0f);
+ glTranslatef(-140,-100,0);
+
+
+glPushMatrix();
+glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(135,470);
+ glVertex2d(135,480);
+ glVertex2d(145,480);
+ glVertex2d(145,470);
+ glEnd();
+
+ //body
+
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(130,470);
+ glVertex2d(130,420);
+ glVertex2d(150,420);
+ glVertex2d(150,470);
+ glEnd();
+
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(138,420);
+ glVertex2d(138,410);
+ glVertex2d(142,410);
+ glVertex2d(142,420);
+ glEnd();
+
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(138,410);
+ glVertex2d(130,400);
+ glVertex2d(150,400);
+ glVertex2d(142,410);
+ glEnd();
+
+ //left sidebar
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(130,450);
+ glVertex2d(125,450);
+ glVertex2d(125,440);
+ glVertex2d(130,440);
+ glEnd();
+ glPopMatrix();
+ //left hands
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(125,458);
+ glVertex2d(95,458);
+ glVertex2d(95,432);
+ glVertex2d(125,432);
+ glEnd();
+
+ //right sidebar
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(130,450);
+ glVertex2d(155,450);
+ glVertex2d(155,440);
+ glVertex2d(130,440);
+ glEnd();
+ //right hand
+ glBegin(GL_QUADS);
+ glColor3ub(176,196,222);
+ glVertex2d(155,458);
+ glVertex2d(185,458);
+ glVertex2d(185,432);
+ glVertex2d(155,432);
+ glEnd();
+
+
+ //decoration
+ glBegin(GL_LINES);
+ glLineWidth(5.0);
+ glColor3ub(0,0,0);
+ glVertex2d(135,465);
+ glVertex2d(135,425);
+ glVertex2d(145,425);
+ glVertex2d(145,465);
+ glEnd();
+ //left hand decoration
+
+ glBegin(GL_LINES);
+ glColor3ub(0,0,0);
+ glVertex2d(105,458);
+ glVertex2d(105,432);
+ glVertex2d(120,458);
+ glVertex2d(120,432);
+ glVertex2d(95,450);
+ glVertex2d(125,450);
+ glVertex2d(95,440);
+ glVertex2d(125,440);
+ glEnd();
+
+ //right hand decoration
+ glBegin(GL_LINES);
+ glColor3ub(0,0,0);
+ glVertex2d(160,458);
+ glVertex2d(160,432);
+ glVertex2d(175,458);
+ glVertex2d(175,432);
+ glVertex2d(155,450);
+ glVertex2d(185,450);
+ glVertex2d(155,440);
+ glVertex2d(185,440);
+ glEnd();
+    glPopMatrix();
+
+
+
+
+
+
+ glPopMatrix();
+ glPopMatrix();
+
+}
+
+void sateliteUpdate(int val)
+{
+    satelite_angle1 +=2.0f;
+    if(satelite_angle1 >= 360)
+    {
+        satelite_angle1 -=360;
+    }
+    glutPostRedisplay();
+    glutTimerFunc(20,sateliteUpdate,0);
+}
